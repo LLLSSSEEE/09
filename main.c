@@ -6,16 +6,20 @@
 int main(void)
 {
   int i;
-  int grade[SIZE];
-  int score[SIZE];
+  int a[SIZE] = {1,2,3,4,5};
+  int b[SIZE] = {1,2,3,4,6};
+  int flag_same =1;
 
   for(i=0; i<SIZE; i++)
-      grade[i] = rand()%100;
-  for(i=0; i<SIZE; i++)
-      score[i]=grade[i];
-  for(i=0; i<SIZE; i++)
-      printf("score[%d] = %d\n", i, score[i]);
-  
+  {
+      if(a[i] != b[i])
+      {
+          printf("배열은 다른 값을 가집니다.\n");
+          printf("a[%d]=%d b[%d]=%d\n", i, a[i], i, b[i]);
+          flag_same = 0;
+      }
+  }        
+    
       
   
   system("PAUSE");	
